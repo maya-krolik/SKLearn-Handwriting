@@ -17,7 +17,7 @@ import math
 def main():
     
     # read processed data (see process_data.py)
-    data = (shuffle(pd.read_csv('archive/data.csv'))).reset_index()
+    data = (shuffle(pd.read_csv('data.csv'))).reset_index()
 
     # make quantity of right and left datapoints equal
     data_left = data[data["Handedness"] < 0.5]
