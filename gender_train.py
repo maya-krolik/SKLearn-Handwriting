@@ -15,7 +15,7 @@ import pandas as pd
 def main():
     
     # read processed data (see process_data.py)
-    data = pd.read_csv('archive/data.csv')
+    data = pd.read_csv('data.csv')
 
     # split data into dependent and independent variables
     dataY = data.pop("Gender")
