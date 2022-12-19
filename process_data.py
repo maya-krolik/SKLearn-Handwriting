@@ -8,10 +8,10 @@ import pandas as pd
 
 # ------------------------------------------------------------------------------
 def main():
-    glyph = pd.read_csv('/Users/mayakrolik/code/advhoncs/ScikitLearn/Handwriting/archive/glyph.csv')
+    glyph = pd.read_csv('glyph.csv')
     # glyph.drop(['Z_ENT', 'ZINDEX', 'ZDEVICE'])
     
-    subject = pd.read_csv('/Users/mayakrolik/code/advhoncs/ScikitLearn/Handwriting/archive/subject.csv')
+    subject = pd.read_csv('subject.csv')
     # subject.drop(['Z_ENT', 'ZINDEX', 'ZNATIVELANGUAGE'])
     
     total_dataset = pd.merge(subject, glyph, left_on='Z_PK', right_on='ZSUBJECT')
@@ -64,6 +64,6 @@ def main():
     total_dataset = pd.concat([total_dataset, numerical_handedness], axis = 1)
     total_dataset = pd.concat([total_dataset, numerical_finger], axis = 1)
 
-    total_dataset.to_csv('/Users/mayakrolik/code/advhoncs/ScikitLearn/Handwriting/archive/data.csv')
+    total_dataset.to_csv('data.csv')
 
 main()
